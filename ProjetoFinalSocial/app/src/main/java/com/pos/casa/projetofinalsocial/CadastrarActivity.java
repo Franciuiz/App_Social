@@ -59,7 +59,9 @@ public class CadastrarActivity extends AppCompatActivity {
                         if(response.body() != null) {
                             Contatos c = response.body();
                             Toast.makeText(getBaseContext(), endereco.getText().toString() + " foi cadastrado com sucesso", Toast.LENGTH_LONG).show();
-                            // espaço reservado pra finalizar a intent
+
+                            // finaliza essa activity e retorna para activity originaria
+                            finish();
                         } else {
                             Toast.makeText(getBaseContext(), endereco.getText().toString() + " não foi cadastrado com sucesso", Toast.LENGTH_LONG).show();
 

@@ -21,7 +21,7 @@ import java.util.List;
 public class RecyclerViewActivity extends AppCompatActivity {
 
     private RecyclerView mRecylerView;
-    private RecyclerView.Adapter mAdapter;
+    private Adaptador mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
 
 

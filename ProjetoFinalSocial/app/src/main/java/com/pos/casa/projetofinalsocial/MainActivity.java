@@ -49,18 +49,8 @@ public class MainActivity extends AppCompatActivity {
         buttonMaps.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, MapsActivity.class);
-
-
-                Bundle bundle = new Bundle();
-
-                bundle.putDouble("latitude", -7.1588602);
-                bundle.putDouble("longitude", -34.8572636);
-
-                i.putExtras(bundle);
-
+                Intent i = new Intent(MainActivity.this, CoordenadasActivity.class);
                 startActivity(i);
-
             }
         });
     }

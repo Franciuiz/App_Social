@@ -51,6 +51,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         //mMap.moveCamera(CameraUpdateFactory.newLatLng(localizacao));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(localizacao, 17));
 
+        //Unipe ( -7.1588602, -34.8572636)
+
 
 
     }
