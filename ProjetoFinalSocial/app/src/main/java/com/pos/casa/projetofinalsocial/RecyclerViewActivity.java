@@ -13,15 +13,19 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.pos.casa.projetofinalsocial.model.Contatos;
 import com.pos.casa.projetofinalsocial.recyclerView.Adaptador;
+import com.pos.casa.projetofinalsocial.retrofit.RetrofitConfig;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import retrofit2.Call;
+
 public class RecyclerViewActivity extends AppCompatActivity {
 
     private RecyclerView mRecylerView;
-    private Adaptador mAdapter;
+    private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
 
 
@@ -86,13 +90,15 @@ public class RecyclerViewActivity extends AppCompatActivity {
 
     public List<String> getListaString(int qnt) {
 
-        String nContatos = "contatos";
+        Call<List<Contatos>> c = new RetrofitConfig().getService().getAllContatos();
+
+        String nContatos = c.toString();
         List<String> lista = new ArrayList<>();
 
         //Adicionar itens na minha lista
         for (int i = 0; i < qnt; i++) {
-            int numContatos = i + 1;
-            lista.add(nContatos + " " + numContatos);
+            lista.add(nContatos);
+
         }
 
         return lista;
